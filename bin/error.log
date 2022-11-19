@@ -1,0 +1,132 @@
+2022-10-24 12:28 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\2263904916.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:28 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\2263904916.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:28 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\735435272.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:29 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\3939839000.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:30 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\3939839000.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:30 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\3939839000.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:31 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\3939839000.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:32 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\3939839000.py", line 69, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:33 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\851458545.py", line 73, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:33 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\851458545.py", line 73, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:33 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\851458545.py", line 73, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+2022-10-24 12:33 ERROR: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
+Traceback (most recent call last):
+  File "C:\Users\conor.breen\AppData\Local\Temp\ipykernel_16256\851458545.py", line 73, in download
+    yt = YouTube(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\__main__.py", line 71, in __init__
+    self.video_id = extract.video_id(url)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\extract.py", line 133, in video_id
+    return regex_search(r"(?:v=|\/)([0-9A-Za-z_-]{11}).*", url, group=1)
+  File "C:\Users\conor.breen\AppData\Local\Programs\Python\Python39\Lib\site-packages\pytube\helpers.py", line 129, in regex_search
+    raise RegexMatchError(caller="regex_search", pattern=pattern)
+pytube.exceptions.RegexMatchError: regex_search: could not find match for (?:v=|\/)([0-9A-Za-z_-]{11}).*
