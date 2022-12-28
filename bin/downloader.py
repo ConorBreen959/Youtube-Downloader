@@ -1,8 +1,10 @@
 import sys
+import ctypes
 import logging
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QLineEdit, QPushButton, QLabel, QMessageBox
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import Qt
+from vimeo_downloader import Vimeo
 from pytube import YouTube
 
 from config import CONFIG
@@ -22,10 +24,18 @@ class GUI(QMainWindow):
         self.url_count = 0
         self.urls = []
         self.setGeometry(250, 250, 250, 250)
-        self.setWindowTitle("Keeva's Youtube Downloader")
+        myappid = 'video.downloader'  # arbitrary string
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+        self.setWindowIcon(QIcon('icon.jpg'))
+        self.setWindowTitle("Keeva's Video Downloader")
         widget = QWidget()
         self.grid = QGridLayout()
-        self.title = QLabel("Add Youtube Links to Download", self)
+        self.title = QLabel("Add Youtube & Vimeo Links to Download", self)
+        img_label = QLabel(self)
+        pixmap = QPixmap("concon.jpg")
+        img_label.resize(125, 125)
+        img_label.setPixmap(pixmap.scaled(img_label.size()))
+        img_label.setScaledContents(True)
         self.title.setAlignment(Qt.AlignCenter)
         self.status= QLabel("", self)
         self.status.setAlignment(Qt.AlignCenter)
@@ -35,11 +45,12 @@ class GUI(QMainWindow):
         self.add_button.clicked.connect(self.addurlbox)
         self.remove_button = QPushButton("Clear Video", self)
         self.remove_button.clicked.connect(self.removeurlbox)
-        self.grid.addWidget(self.title, 0, 0, 1, 0)
-        self.grid.addWidget(self.status, 1, 0, 1, 0)
-        self.grid.addWidget(self.run_button, 2, 0, 1, 0)
-        self.grid.addWidget(self.add_button, 3, 1)
-        self.grid.addWidget(self.remove_button, 3, 0)
+        self.grid.addWidget(img_label, 0, 0)
+        self.grid.addWidget(self.title, 1, 0, 1, 0)
+        self.grid.addWidget(self.status, 2, 0, 1, 0)
+        self.grid.addWidget(self.run_button, 3, 0, 1, 0)
+        self.grid.addWidget(self.add_button, 4, 1)
+        self.grid.addWidget(self.remove_button, 4, 0)
         widget.setLayout(self.grid)
         self.setCentralWidget(widget)
         self.show()
@@ -47,7 +58,7 @@ class GUI(QMainWindow):
     def addurlbox(self):
         self.url_count += 1
         self.url_box = QLineEdit(self)
-        self.grid.addWidget(self.url_box, self.url_count + 3, 0, 1, 0)
+        self.grid.addWidget(self.url_box, self.url_count + 4, 0, 1, 0)
         self.url_box.textChanged.connect(self.captureurl)
         print(self.urls)
         print(self.url_count)
@@ -64,7 +75,7 @@ class GUI(QMainWindow):
     
     def download(self):
         failed_downloads = []
-        self.urls = [url for url in self.urls if url.startswith("https://you")]
+        self.urls = [url for url in self.urls if url.startswith(("https://you", "https://vimeo"))]
         self.url_count = len(self.urls)
         for url, count in zip(self.urls, range(self.url_count)):
             self.status.setText(f"Downloading {count + 1} of {self.url_count}...")
@@ -72,8 +83,18 @@ class GUI(QMainWindow):
             print(url)
             print(count)
             try:
-                yt = YouTube(url)
-                yt.streams.filter(progressive=True, file_extension="mp4").order_by("resolution").desc().first().download(CONFIG["DOWNLOAD_DIR"])
+                if url.startswith("https://you"):
+                    yt = YouTube(url)
+                    yt.streams.filter(progressive=True, file_extension="mp4").order_by("resolution").desc().first().download(CONFIG["DOWNLOAD_DIR"])
+                elif url.startswith("https://vimeo"):
+                    v = Vimeo(url)
+                    filename = "vimeo" + "-" + url.split("/")[-1]
+                    s = v.streams
+                    best_stream = s[-1]
+                    best_stream.download(download_directory=CONFIG["DOWNLOAD_DIR"],
+                                         filename=filename)
+                else:
+                    failed_downloads.append(url)
             except Exception as e:
                 logging.error(e, exc_info=True)
                 failed_downloads.append(url)
