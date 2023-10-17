@@ -1,3 +1,4 @@
+import os
 import sys
 import ctypes
 import logging
@@ -74,8 +75,10 @@ class GUI(QMainWindow):
         self.urls.append(url)
     
     def download(self):
+        valid_url_prefixes = ("https://you", "https://www.you", "https://vimeo")
         failed_downloads = []
-        self.urls = [url for url in self.urls if url.startswith(("https://you", "https://vimeo"))]
+        invalid_urls = [url for url in self.urls if not url.startswith(valid_url_prefixes)]
+        self.urls = [url for url in self.urls if url.startswith(valid_url_prefixes)]
         self.url_count = len(self.urls)
         for url, count in zip(self.urls, range(self.url_count)):
             self.status.setText(f"Downloading {count + 1} of {self.url_count}...")
@@ -83,7 +86,8 @@ class GUI(QMainWindow):
             print(url)
             print(count)
             try:
-                if url.startswith("https://you"):
+                if url.startswith(("https://you", "https://www.you")):
+                    print(url)
                     yt = YouTube(url)
                     yt.streams.filter(progressive=True, file_extension="mp4").order_by("resolution").desc().first().download(CONFIG["DOWNLOAD_DIR"])
                 elif url.startswith("https://vimeo"):
@@ -98,9 +102,12 @@ class GUI(QMainWindow):
             except Exception as e:
                 logging.error(e, exc_info=True)
                 failed_downloads.append(url)
+        finish_text = "Finished!"
         if failed_downloads:
             self.log_failed_downloads(failed_downloads)
-        self.status.setText("Finished!")
+        if invalid_urls:
+            finish_text = finish_text + f"\n\n\nFound some invalid urls:\n\n\n{invalid_urls}\n\n"
+        self.status.setText(finish_text)
             
     def log_failed_downloads(self, failed_downloads):
         msg = QMessageBox(self)
